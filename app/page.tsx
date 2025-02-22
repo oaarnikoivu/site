@@ -44,7 +44,11 @@ export default function Home() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <Command className="bg-transparent focus:ring-0 focus:outline-0">
+        <Command
+          className="bg-transparent focus:ring-0 focus:outline-0"
+          defaultValue={"-"}
+          disablePointerSelection={true}
+        >
           <CommandInput
             placeholder="Search..."
             autoFocus
