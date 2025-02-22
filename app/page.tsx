@@ -1,5 +1,6 @@
 import ExperienceItem from "@/components/experience-item";
 import GitHubLogo from "@/components/github-logo";
+import LinkedInLogo from "@/components/linkedin-logo";
 import NGTLogo from "@/components/ngt-logo";
 import SocialItem from "@/components/social-item";
 import SoundCloudIcon from "@/components/soundcloud-icon";
@@ -125,6 +126,11 @@ export default function Home() {
                 icon={<SoundCloudIcon className="size-5" />}
                 name="SoundCloud"
                 linkTo="https://www.soundcloud.com/oliverantonmusic"
+              />
+              <SocialItem
+                icon={<LinkedInLogo className="size-5" />}
+                name="LinkedIn"
+                linkTo="https://www.linkedin.com/in/oaarnikoivu/"
               />
             </CommandGroup>
           </CommandList>
