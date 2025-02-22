@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { CommandItem } from "./ui/command";
+import { CommandItem } from "../ui/command";
 
 export default function SocialItem({
   icon,
