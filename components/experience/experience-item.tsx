@@ -37,6 +37,7 @@ export default function ExperienceItem({
             <span className="font-medium">{title}</span>
           </div>
         </div>
+
         <span className="text-muted-foreground text-xs text-nowrap">
           {date}
         </span>
