@@ -25,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} dark antialiased`}
       >
-        {children}
+        <main className="h-screen w-screen pt-24 flex items-start justify-center bg-linear-to-r/oklch from-black to-zinc-800">
+          {children}
+        </main>
       </body>
     </html>
   );

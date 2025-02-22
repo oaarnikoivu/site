@@ -1,101 +1,167 @@
+import GitHubLogo from "@/components/github-logo";
+import NGTLogo from "@/components/ngt-logo";
+import SoundCloudIcon from "@/components/soundcloud-icon";
+import TwitterLogo from "@/components/twitter-logo";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+} from "@/components/ui/command";
 import Image from "next/image";
+
+function ExperienceItem({
+  icon,
+  company,
+  title,
+  date,
+}: {
+  icon: React.ReactNode;
+  company: string;
+  title: string;
+  date: string;
+}) {
+  const searchValue = company + " " + title;
+
+  return (
+    <CommandItem
+      value={searchValue}
+      className="justify-between transition-colors"
+    >
+      <div className="flex items-center gap-2">
+        {icon}
+        <div className="flex flex-col gap-1">
+          <div className="text-muted-foreground text-xs">{company}</div>
+          <span className="font-medium">{title}</span>
+        </div>
+      </div>
+      <span className="text-muted-foreground text-xs">{date}</span>
+    </CommandItem>
+  );
+}
+
+function SocialItem({ icon, name }: { icon: React.ReactNode; name: string }) {
+  return (
+    <CommandItem value={name}>
+      <div className="flex items-center gap-2">
+        {icon}
+        <span className="font-medium">{name}</span>
+      </div>
+    </CommandItem>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <Card className="max-w-[800px] bg-transparent border-none">
+      <CardHeader>
+        <CardTitle>Oliver Aarnikoivu</CardTitle>
+        <CardDescription className="text-justify">
+          I'm a Software Engineer at Next Gate Tech in Luxembourg, with a strong
+          focus on product design. My interests lie in web development,
+          human-computer interaction, and artificial intelligence.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Command className="bg-transparent focus:ring-0 focus:outline-0">
+          <CommandInput placeholder="Search..." autoFocus />
+          <CommandList>
+            <CommandEmpty>No results found.</CommandEmpty>
+            <CommandGroup heading="Experience">
+              <ExperienceItem
+                icon={<NGTLogo className="size-5 grayscale invert" />}
+                company="Next Gate Tech"
+                title="Software Engineer"
+                date="Jun 2022 - Present"
+              />
+              <ExperienceItem
+                icon={
+                  <Image
+                    src="https://media.licdn.com/dms/image/v2/C4D0BAQHorNmdgYsSVg/company-logo_200_200/company-logo_200_200/0/1630576624609/motions_logo?e=2147483647&v=beta&t=IgtBv6NsMijuWDaunE-maumaAWprUdhcKeTFhQLpEvk"
+                    alt="Motion-S"
+                    width={20}
+                    height={20}
+                    className="grayscale invert"
+                  />
+                }
+                company="Motion-S"
+                title="Data Scientist"
+                date="Oct 2021 - Jul 2022"
+              />
+              <ExperienceItem
+                icon={
+                  <Image
+                    src="https://www.siliconluxembourg.lu/wp-content/uploads/2020/01/Talkwalker-Logo_Cloud_Blue-300x224.png"
+                    alt="Talkwalker"
+                    width={20}
+                    height={20}
+                    className="grayscale invert"
+                  />
+                }
+                company="Talkwalker (Hootsuite)"
+                title="Software Engineer Intern"
+                date="May 2019 - Sep 2019"
+              />
+            </CommandGroup>
+            <CommandSeparator />
+            <CommandGroup heading="Education">
+              <ExperienceItem
+                icon={
+                  <Image
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWCAE0c_7W4J6GlVqUZmRY6-mMs46mhrD4qg&s"
+                    alt="University of Edinburgh"
+                    width={20}
+                    height={20}
+                    className="grayscale invert"
+                  />
+                }
+                company="University of Edinburgh"
+                title="MSc Artificial Intelligence"
+                date="Sep 2020 - Sep 2021"
+              />
+              <ExperienceItem
+                icon={
+                  <Image
+                    src="https://cdn.movember.com/uploads/network-profile/e3be00bfb29ff971744f43021ef9aab7-5fa9287cc6351-hero.jpg"
+                    alt="Robert Gordon University"
+                    width={20}
+                    height={20}
+                    className="grayscale invert"
+                  />
+                }
+                company="Robert Gordon University"
+                title="BSc Computer Science"
+                date="Sep 2016 - Sep 2020"
+              />
+            </CommandGroup>
+            <CommandSeparator />
+            <CommandGroup heading="Social">
+              <SocialItem
+                icon={<GitHubLogo className="size-5" />}
+                name="GitHub"
+              />
+              <SocialItem
+                icon={<TwitterLogo className="size-5" />}
+                name="Twitter"
+              />
+              <SocialItem
+                icon={<SoundCloudIcon className="size-5" />}
+                name="SoundCloud"
+              />
+            </CommandGroup>
+          </CommandList>
+        </Command>
+      </CardContent>
+    </Card>
   );
 }
