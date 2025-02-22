@@ -26,7 +26,16 @@ export default function Home() {
   return (
     <Card className="max-w-[800px] bg-transparent border-none">
       <CardHeader>
-        <CardTitle>Oliver Aarnikoivu</CardTitle>
+        <CardTitle>
+          <Image
+            src="https://avatars.githubusercontent.com/u/22493428?v=4"
+            alt="profile"
+            width={100}
+            height={100}
+            className="mb-2 grayscale invert contrast-200 -ml-6"
+          />
+          Oliver Aarnikoivu
+        </CardTitle>
         <CardDescription className="text-justify">
           I&apos;m a Software Engineer at Next Gate Tech in Luxembourg, with a
           strong focus on product design. My interests lie in web development,

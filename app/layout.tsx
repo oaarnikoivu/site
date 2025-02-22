@@ -34,9 +34,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} dark antialiased`}
       >
-        <main className="h-screen w-screen pt-24 flex items-start justify-center bg-linear-to-r/oklch from-black to-zinc-800">
+        <div className="min-h-screen flex flex-col justify-between flex items-center pt-0 md:pt-8 justify-start bg-linear-to-r/oklch from-black to-zinc-800">
           {children}
-        </main>
+        </div>
       </body>
     </html>
   );
