@@ -1,5 +1,7 @@
+import ExperienceItem from "@/components/experience-item";
 import GitHubLogo from "@/components/github-logo";
 import NGTLogo from "@/components/ngt-logo";
+import SocialItem from "@/components/social-item";
 import SoundCloudIcon from "@/components/soundcloud-icon";
 import TwitterLogo from "@/components/twitter-logo";
 import {
@@ -14,52 +16,10 @@ import {
   CommandEmpty,
   CommandGroup,
   CommandInput,
-  CommandItem,
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
 import Image from "next/image";
-
-function ExperienceItem({
-  icon,
-  company,
-  title,
-  date,
-}: {
-  icon: React.ReactNode;
-  company: string;
-  title: string;
-  date: string;
-}) {
-  const searchValue = company + " " + title;
-
-  return (
-    <CommandItem
-      value={searchValue}
-      className="justify-between transition-colors"
-    >
-      <div className="flex items-center gap-2">
-        {icon}
-        <div className="flex flex-col gap-1">
-          <div className="text-muted-foreground text-xs">{company}</div>
-          <span className="font-medium">{title}</span>
-        </div>
-      </div>
-      <span className="text-muted-foreground text-xs">{date}</span>
-    </CommandItem>
-  );
-}
-
-function SocialItem({ icon, name }: { icon: React.ReactNode; name: string }) {
-  return (
-    <CommandItem value={name}>
-      <div className="flex items-center gap-2">
-        {icon}
-        <span className="font-medium">{name}</span>
-      </div>
-    </CommandItem>
-  );
-}
 
 export default function Home() {
   return (
@@ -83,6 +43,7 @@ export default function Home() {
                 company="Next Gate Tech"
                 title="Software Engineer"
                 date="Jun 2022 - Present"
+                linkTo="https://www.nextgatetech.com"
               />
               <ExperienceItem
                 icon={
@@ -97,6 +58,7 @@ export default function Home() {
                 company="Motion-S"
                 title="Data Scientist"
                 date="Oct 2021 - Jul 2022"
+                linkTo="https://www.linkedin.com/company/motion%C2%B7s"
               />
               <ExperienceItem
                 icon={
@@ -111,6 +73,7 @@ export default function Home() {
                 company="Talkwalker (Hootsuite)"
                 title="Software Engineer Intern"
                 date="May 2019 - Sep 2019"
+                linkTo="https://www.talkwalker.com/"
               />
             </CommandGroup>
             <CommandSeparator />
@@ -128,6 +91,7 @@ export default function Home() {
                 company="University of Edinburgh"
                 title="MSc Artificial Intelligence"
                 date="Sep 2020 - Sep 2021"
+                linkTo="https://postgraduate.degrees.ed.ac.uk/?id=107&r=site/view"
               />
               <ExperienceItem
                 icon={
@@ -142,6 +106,7 @@ export default function Home() {
                 company="Robert Gordon University"
                 title="BSc Computer Science"
                 date="Sep 2016 - Sep 2020"
+                linkTo="https://www.rgu.ac.uk/study/courses/446-bsc-hons-computer-science"
               />
             </CommandGroup>
             <CommandSeparator />
@@ -149,14 +114,17 @@ export default function Home() {
               <SocialItem
                 icon={<GitHubLogo className="size-5" />}
                 name="GitHub"
+                linkTo="https://www.github.com/oaarnikoivu"
               />
               <SocialItem
                 icon={<TwitterLogo className="size-5" />}
                 name="Twitter"
+                linkTo="https://x.com/aarn_io"
               />
               <SocialItem
                 icon={<SoundCloudIcon className="size-5" />}
                 name="SoundCloud"
+                linkTo="https://www.soundcloud.com/oliverantonmusic"
               />
             </CommandGroup>
           </CommandList>
