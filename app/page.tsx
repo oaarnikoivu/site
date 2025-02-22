@@ -27,8 +27,8 @@ export default function Home() {
       <CardHeader>
         <CardTitle>Oliver Aarnikoivu</CardTitle>
         <CardDescription className="text-justify">
-          I'm a Software Engineer at Next Gate Tech in Luxembourg, with a strong
-          focus on product design. My interests lie in web development,
+          I&apos;m a Software Engineer at Next Gate Tech in Luxembourg, with a
+          strong focus on product design. My interests lie in web development,
           human-computer interaction, and artificial intelligence.
         </CardDescription>
       </CardHeader>
