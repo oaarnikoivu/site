@@ -123,14 +123,14 @@ export default function Home() {
                 linkTo="https://x.com/aarn_io"
               />
               <SocialItem
-                icon={<SoundCloudIcon className="size-5" />}
-                name="SoundCloud"
-                linkTo="https://www.soundcloud.com/oliverantonmusic"
-              />
-              <SocialItem
                 icon={<LinkedInLogo className="size-5" />}
                 name="LinkedIn"
                 linkTo="https://www.linkedin.com/in/oaarnikoivu/"
+              />
+              <SocialItem
+                icon={<SoundCloudIcon className="size-5" />}
+                name="SoundCloud"
+                linkTo="https://www.soundcloud.com/oliverantonmusic"
               />
             </CommandGroup>
           </CommandList>
