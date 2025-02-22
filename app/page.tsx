@@ -36,7 +36,7 @@ export default function Home() {
           />
           Oliver Aarnikoivu
         </CardTitle>
-        <CardDescription className="text-justify">
+        <CardDescription>
           I&apos;m a Software Engineer at Next Gate Tech in Luxembourg, with a
           strong focus on product design. My interests lie in web development,
           human-computer interaction, and artificial intelligence.
