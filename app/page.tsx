@@ -47,7 +47,6 @@ export default function Home() {
         <Command
           className="bg-transparent focus:ring-0 focus:outline-0"
           defaultValue={"-"}
-          disablePointerSelection={true}
         >
           <CommandInput
             placeholder="Search..."
