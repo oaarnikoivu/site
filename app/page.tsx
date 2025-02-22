@@ -60,7 +60,7 @@ export default function Home() {
                 icon={<NGTLogo className="size-5" />}
                 company="Next Gate Tech"
                 title="Software Engineer"
-                date="Jun 2022 - Present"
+                date="Jul 2022 - Present"
                 linkTo="https://www.nextgatetech.com"
               />
               <ExperienceItem
