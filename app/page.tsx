@@ -32,8 +32,8 @@ export default function Home() {
           Oliver Aarnikoivu
         </CardTitle>
         <CardDescription className="text-xs md:text-sm">
-          I&apos;m a Software Engineer at Next Gate Tech in Luxembourg, focusing
-          on product development and design. My work combines web development,
+          Software Engineer at Next Gate Tech. Based in Luxembourg. Focused on
+          product development and design. My work combines web development,
           human-computer interaction, and artificial intelligence to build
           effective software solutions.
         </CardDescription>
@@ -46,7 +46,7 @@ export default function Home() {
           <CommandInput
             placeholder="Search..."
             autoFocus
-            className="text-xs md:text-sm"
+            className="text-xs md:text-sm uppercase"
           />
           <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
