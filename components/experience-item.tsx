@@ -26,7 +26,7 @@ export default function ExperienceItem({
       }}
     >
       <Link
-        className="flex items-center justify-between w-full"
+        className="flex items-center justify-between w-full text-xs md:text-sm"
         href={linkTo}
         target="_blank"
       >
@@ -37,7 +37,9 @@ export default function ExperienceItem({
             <span className="font-medium">{title}</span>
           </div>
         </div>
-        <span className="text-muted-foreground text-xs">{date}</span>
+        <span className="text-muted-foreground text-xs text-nowrap">
+          {date}
+        </span>
       </Link>
     </CommandItem>
   );

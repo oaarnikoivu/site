@@ -36,7 +36,7 @@ export default function Home() {
           />
           Oliver Aarnikoivu
         </CardTitle>
-        <CardDescription>
+        <CardDescription className="text-xs md:text-sm">
           I&apos;m a Software Engineer at Next Gate Tech in Luxembourg, with a
           strong focus on product design. My interests lie in web development,
           human-computer interaction, and artificial intelligence.
@@ -44,12 +44,16 @@ export default function Home() {
       </CardHeader>
       <CardContent>
         <Command className="bg-transparent focus:ring-0 focus:outline-0">
-          <CommandInput placeholder="Search..." autoFocus />
+          <CommandInput
+            placeholder="Search..."
+            autoFocus
+            className="text-xs md:text-sm"
+          />
           <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup heading="Experience">
               <ExperienceItem
-                icon={<NGTLogo className="size-5 grayscale invert" />}
+                icon={<NGTLogo className="size-5" />}
                 company="Next Gate Tech"
                 title="Software Engineer"
                 date="Jun 2022 - Present"
@@ -62,7 +66,7 @@ export default function Home() {
                     alt="Motion-S"
                     width={20}
                     height={20}
-                    className="grayscale invert"
+                    className="rounded-full"
                   />
                 }
                 company="Motion-S"
@@ -77,7 +81,7 @@ export default function Home() {
                     alt="Talkwalker"
                     width={20}
                     height={20}
-                    className="grayscale invert"
+                    className="rounded-full"
                   />
                 }
                 company="Talkwalker (Hootsuite)"
@@ -95,7 +99,7 @@ export default function Home() {
                     alt="University of Edinburgh"
                     width={20}
                     height={20}
-                    className="grayscale invert"
+                    className="rounded-full"
                   />
                 }
                 company="University of Edinburgh"
@@ -110,7 +114,7 @@ export default function Home() {
                     alt="Robert Gordon University"
                     width={20}
                     height={20}
-                    className="grayscale invert"
+                    className="rounded-full"
                   />
                 }
                 company="Robert Gordon University"
@@ -122,22 +126,22 @@ export default function Home() {
             <CommandSeparator />
             <CommandGroup heading="Social">
               <SocialItem
-                icon={<GitHubLogo className="size-5" />}
+                icon={<GitHubLogo className="size-4.5" />}
                 name="GitHub"
                 linkTo="https://www.github.com/oaarnikoivu"
               />
               <SocialItem
-                icon={<TwitterLogo className="size-5" />}
+                icon={<TwitterLogo className="size-4.5" />}
                 name="Twitter"
                 linkTo="https://x.com/aarn_io"
               />
               <SocialItem
-                icon={<LinkedInLogo className="size-5" />}
+                icon={<LinkedInLogo className="size-4.5" />}
                 name="LinkedIn"
                 linkTo="https://www.linkedin.com/in/oaarnikoivu/"
               />
               <SocialItem
-                icon={<SoundCloudIcon className="size-5" />}
+                icon={<SoundCloudIcon className="size-4.5" />}
                 name="SoundCloud"
                 linkTo="https://www.soundcloud.com/oliverantonmusic"
               />

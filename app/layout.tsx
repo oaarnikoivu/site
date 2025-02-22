@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} dark antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} dark antialiased tracking-tight md:tracking-normal`}
       >
         <div className="min-h-screen flex flex-col justify-between flex items-center pt-0 md:pt-8 justify-start bg-linear-to-r/oklch from-black to-zinc-800">
           {children}
