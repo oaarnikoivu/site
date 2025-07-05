@@ -6,10 +6,12 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "registry:build": "shadcn build"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.6",
+    "@radix-ui/react-popover": "^1.1.14",
     "@radix-ui/react-slot": "^1.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -18,12 +20,14 @@
     "next": "15.2.0-canary.69",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "shadcn": "^2.8.0-canary.1",
     "tailwind-merge": "^3.0.1",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@tanstack/react-virtual": "^3.13.12",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

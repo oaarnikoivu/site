@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "shadcn-virtualized-combobox",
+  "homepage": "https://oaarnikoivu.com",
+  "items": [
+    {
+      "name": "virtualized-combobox",
+      "type": "registry:component",
+      "title": "shadcn/ui Virtualized Combobox",
+      "description": "A virtualized shadcn/ui combobox.",
+      "dependencies": ["@tanstack/react-virtual", "lucide-react"],
+      "registryDependencies": ["button", "command", "popover"],
+      "files": [
+        {
+          "path": "registry/oaarnikoivu/virtualized-combobox.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}
