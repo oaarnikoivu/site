@@ -18,7 +18,7 @@ import {
 
 export default function Home() {
   return (
-    <Card className="max-w-[800px] bg-transparent border-none">
+    <Card className="max-w-[800px] border-none bg-transparent">
       <CardHeader>
         <CardTitle>Oliver Aarnikoivu</CardTitle>
         <CardDescription className="text-xs md:text-sm">
@@ -36,7 +36,7 @@ export default function Home() {
           <CommandInput
             placeholder="Search..."
             autoFocus
-            className="text-xs md:text-sm uppercase"
+            className="text-xs uppercase md:text-sm"
           />
           <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>

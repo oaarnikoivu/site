@@ -15,7 +15,7 @@ export default function SocialItem({
   return (
     <CommandItem value={name} onSelect={() => window.open(linkTo, "_blank")}>
       <Link
-        className="flex items-center gap-2.5 text-xs md:text-sm w-full"
+        className="flex w-full items-center gap-2.5 text-xs md:text-sm"
         href={linkTo}
         target="_blank"
       >

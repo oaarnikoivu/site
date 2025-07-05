@@ -26,7 +26,7 @@ export default function ExperienceItem({
       }}
     >
       <Link
-        className="flex items-center justify-between w-full text-xs md:text-sm"
+        className="flex w-full items-center justify-between text-xs md:text-sm"
         href={linkTo}
         target="_blank"
       >

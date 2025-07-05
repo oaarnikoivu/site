@@ -33,9 +33,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} uppercase dark antialiased tracking-tight md:tracking-normal`}
+        className={`${geistSans.variable} ${geistMono.variable} dark tracking-tight uppercase antialiased md:tracking-normal`}
       >
-        <div className="min-h-screen flex items-center justify-center bg-linear-to-r/oklch from-black to-zinc-800">
+        <div className="flex min-h-screen items-center justify-center bg-linear-to-r/oklch from-black to-zinc-800">
           {children}
         </div>
         <Analytics />
